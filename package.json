@@ -20,7 +20,7 @@
     "build": "tsc",
     "lint": "./node_modules/.bin/ESLint -c .eslintrc.js",
     "format": "prettier --write \"src/**/*.ts\"",
-    "test": "jest --config jestconfig.json"
+    "test": "jest --passWithNoTests --config jestconfig.json"
   },
   "repository": {
     "type": "git",
