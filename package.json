@@ -1,0 +1,56 @@
+{
+  "name": "mailjet-helpers",
+  "version": "1.0.0",
+  "description": "NPM Typescript package template",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=12.18.3",
+    "npm": ">=6.0.0"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "build": "tsc",
+    "lint": "./node_modules/.bin/ESLint -c .eslintrc.js",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "jest --config jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandorTuranszky/mailjet-helpers.git"
+  },
+  "keywords": [
+    "starter",
+    "typescript"
+  ],
+  "author": "Sandor Turanszky <sandor.turanszky@gmail.com> (https://turanszky.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandorTuranszky/mailjet-helpers/issues"
+  },
+  "homepage": "https://github.com/sandorTuranszky/mailjet-helpers#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsdoc": "^30.2.2",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "eslint-plugin-unicorn": "^21.0.0",
+    "jest": "^26.4.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.2.0"
+  },
+  "dependencies": {
+    "typescript": "^3.9.7"
+  }
+}
