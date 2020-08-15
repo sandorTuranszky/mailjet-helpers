@@ -2,7 +2,7 @@ import * as mailjet from 'node-mailjet';
 import { ConnectOptions, Email } from 'node-mailjet';
 import { Payload, Status, ErrorResponse } from './types';
 
-export default class MailjetSubscriptionHelpers {
+export default class MailjetHelpers {
   private instance: Email.Client;
   constructor(api_key: string, api_secret: string, options?: ConnectOptions) {
     this.instance = mailjet.connect(api_key, api_secret) as Email.Client;
