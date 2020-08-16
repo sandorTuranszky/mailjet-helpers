@@ -1,6 +1,6 @@
 import * as mailjet from 'node-mailjet';
 import { ConnectOptions, Email } from 'node-mailjet';
-import { Payload, Status, ErrorResponse } from './types';
+import { Payload, Status, ErrorResponse } from '~/types';
 
 export default class MailjetHelpers {
   private instance: Email.Client;

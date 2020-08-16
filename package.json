@@ -1,6 +1,6 @@
 {
   "name": "mailjet-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NPM Typescript package template",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -17,10 +17,13 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "build": "tsc",
+    "build": "link-module-alias && tsc",
     "lint": "./node_modules/.bin/ESLint -c .eslintrc.js",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest --passWithNoTests --config jestconfig.json"
+  },
+  "_moduleAliases": {
+    "~": "lib"
   },
   "repository": {
     "type": "git",
@@ -54,6 +57,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "link-module-alias": "^1.2.0",
     "node-mailjet": "^3.3.1"
   }
 }

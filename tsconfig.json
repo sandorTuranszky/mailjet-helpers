@@ -5,8 +5,12 @@
     "lib": ["es2020"],
     "declaration": true,
     "outDir": "./lib",
+    "baseUrl": "./",
     "strict": true,
-    "typeRoots": ["src/types", "node_modules/@types"]
+    "typeRoots": ["src/types", "node_modules/@types"],
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
