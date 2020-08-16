@@ -1,6 +1,6 @@
 {
   "name": "mailjet-helpers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NPM Typescript package template",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
